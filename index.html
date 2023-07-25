@@ -391,7 +391,7 @@
                 document.documentElement.scrollTop = document.body.clientHeight * position;
                 scrollY = document.body.clientHeight * position;
 
-                document.body.style.fontSize = (document.body.clientHeight - document.getElementById ("scd1").clientHeight * 2) / 500 + "em";
+                document.body.style.fontSize = (document.body.clientHeight /*- document.getElementById ("scd1").clientHeight * 2*/) / 625 + "em";
             }
 
             document.addEventListener('wheel', se, {passive:false});
