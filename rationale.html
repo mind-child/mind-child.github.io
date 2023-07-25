@@ -88,6 +88,12 @@
         </p>
     </body>
     <script>
+        document.addEventListener('touchstart', function (e) {
+            if (e.touches.length > 1) {
+                e.preventDefault ();
+            }
+        });
+
         var rs = function() {
             document.body.style.fontSize = (window.innerHeight / 500) + 'em';
         };
