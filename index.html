@@ -357,25 +357,29 @@
             
             var lastTouchY;
             var se = function (e) {
-                if (!scrolling) {
-                    if (lastScroll) {
-                        lastScroll = false;
-                        document.documentElement.scrollTo(0, scrollY);
+                if (e.touches && e.touches.length > 1) {  
+                    e.preventDefault();
+                } else {
+                    if (!scrolling) {
+                        if (lastScroll) {
+                            lastScroll = false;
+                            document.documentElement.scrollTo(0, scrollY);
+                        }
+                        else {
+                            if (position !== 3 && (!e.deltaY || e.deltaY > 0) && (!e.touches || lastTouchY > e.touches[0].clientY)) {
+                                scrollDown ();
+                            }
+                            else if (position !== 0 && (!e.deltaY || e.deltaY < 0) && (!e.touches || lastTouchY < e.touches[0].clientY)) {
+                                scrollUp ();
+                            }
+                        }
                     }
                     else {
-                        if (position !== 3 && (!e.deltaY || e.deltaY > 0) && (!e.touches || lastTouchY > e.touches[0].clientY)) {
-                            scrollDown ();
-                        }
-                        else if (position !== 0 && (!e.deltaY || e.deltaY < 0) && (!e.touches || lastTouchY < e.touches[0].clientY)) {
-                            scrollUp ();
-                        }
+                        document.documentElement.scrollTo(0, scrollY);
                     }
+                    
+                    e.preventDefault();
                 }
-                else {
-                    document.documentElement.scrollTo(0, scrollY);
-                }
-                
-                e.preventDefault();
             }
 
             var ts = function (e) {
