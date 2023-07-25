@@ -173,10 +173,10 @@
         <div class="center1back"></div>
         <div style="position: absolute; top: 0%; left: 50%; transform: translate(-50%, 0%);">
             <p style="text-align: center; color: gray; width: 18em;">
-                welcome to<br/> mind-child home site<br/> (under construction)
+                welcome to<br/> the mind-child home site<br/> (under construction)
             </p>
         </div>
-        <div style="position: absolute; top: 100%; left: 50%; transform: translate(-50%, -100%);">
+        <div id="scd1" style="position: absolute; top: 100%; left: 50%; transform: translate(-50%, -100%);">
             <p style="text-align: center; color: gray;">
                 <svg onclick="scrollDown()" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 -960 960 960" width="2em" style="margin-left: auto; margin-right: auto; cursor: pointer; display: block; fill: rgb(208,208,208); background-color: gray; border-radius: 100%;"><path d="M480-322 216-586l67-67 197 198 197-197 67 67-264 263Z"/></svg>
             </p>
@@ -391,7 +391,7 @@
                 document.documentElement.scrollTop = document.body.clientHeight * position;
                 scrollY = document.body.clientHeight * position;
 
-                document.body.style.fontSize = document.body.clientHeight / 600 + "em";
+                document.body.style.fontSize = (document.body.clientHeight - document.getElementById ("scd1").clientHeight * 2) / 500 + "em";
             }
 
             document.addEventListener('wheel', se, {passive:false});
