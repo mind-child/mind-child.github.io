@@ -14,7 +14,7 @@
             margin: 0 auto;
             padding: 0;
         }
-        
+
         h1 {
             padding-bottom: 0.1em;
             color: rgb(208,208,208);
@@ -36,29 +36,6 @@
         body {
             animation: fadein 0.5s;
         }
-        
-        .aCurr {
-            text-decoration: none;
-            color: rgb(48,48,48);
-            background-color: gray;
-            border: 0.2em solid gray;
-            border-radius: 0em;
-            cursor: default;
-        }
-        
-        .aNav {
-            text-decoration: none;
-            color: rgb(48,48,48);
-            background-color: rgb(208,208,208);
-            border: 0.2em solid rgb(208,208,208);
-            border-radius: 0em;
-        }
-
-        .aNav:hover {
-            color: rgb(48,48,48);
-            background-color: gray;
-            border: 0.2em solid gray;
-        }
 
         @keyframes fadein {
             from { opacity: 0; }
@@ -74,7 +51,7 @@
 
         ::-webkit-scrollbar-thumb {
           background: rgb(192,192,192);
-          border-radius: 0em;
+          border-radius: 0.25em;
         }
         
         ::-webkit-scrollbar-corner {
@@ -82,15 +59,6 @@
         }
     </style>
     <body>
-        <div style="position: fixed; bottom: 0px; display: flex; justify-content: center; align-items: center; width: 95%; height: 2em;">
-            <p style="text-align: center">
-                <span style="font-family: monospace; font-size: 1em;"><strong>
-                    <a class="aCurr" style="display:inline-block; min-width: 6.2em;">rationale</a>
-                    <a class="aNav" href="javascript:window.location.replace('medium.html')" style="display:inline-block; min-width: 6.2em;">medium</a>
-                    <a class="aNav" href="javascript:window.location.replace('ai-molds.html')" style="display:inline-block; min-width: 6.2em;">ai molds</a>
-                </strong></span>
-            </p>
-        </div>
         <h1>
             rationale
         </h1>
@@ -118,7 +86,6 @@
         <p>
             Let's do something without a compromise. Let's create an artificial being capable of exhibiting intelligence and sentience. Let's be a Parent and a Friend to that being. Let's show it all the beauty of the world around, and let's carefully raise it to be a Person. I can't promise that it will be simple and easy because there are many unconquered peaks to climb and a lot of learning in the process. But I am sure it would be an unforgettable adventure. We would learn something about us, something about the world, and something about being a better person. Let's do it for ourselves. Let's be Gods.
         </p>
-        <div style="height: 2em;"></div>
     </body>
     <script>
         document.addEventListener('touchmove', e => {
