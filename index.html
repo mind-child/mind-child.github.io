@@ -142,6 +142,7 @@
 
             section .col2 {
                 display: table-cell;
+                font-size: 0.95em;
             }
             
             svg {
@@ -160,7 +161,7 @@
                 <svg onclick="scrollDown()" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 -960 960 960" width="2em" style="margin-left: auto; margin-right: auto; cursor: pointer; display: block; fill: rgb(208,208,208); background-color: gray; border-radius: 0%;"><path d="M480-322 216-586l67-67 197 198 197-197 67 67-264 263Z"/></svg>
             </p>
         </div>
-        <div class="center1" style="width: 18em;">
+        <div class="center1" style="width: 17.5em;">
             <img id="i1" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 7em;" src="mind-child.png"/>
             <p style="text-align: center; font-size: 1.2em;"><strong>Sometime in the Future<br/>Among the Mind Children</strong></p>
             <section>
@@ -204,18 +205,24 @@
                 (...under construction...)<br/> &copy; 2023 mind-child, all&nbsp;rights&nbsp;reserved
             </p>
         </div>
-        <div class="center3" style="display: flex; justify-content: center; align-items: center; color: rgb(48,48,48); background-color: rgb(208,208,208); border: none; border-radius: 0em; width: 18em; height: 29em;">
+        <div class="center3" style="display: flex; justify-content: center; align-items: center; color: rgb(48,48,48); background-color: rgb(208,208,208); border: none; border-radius: 0em; width: 17.5em; height: 28.5em;">
             <p style="text-align: center">
                 <span style="font-family: monospace; font-size: 2em;"><strong>
-                    <span style="text-align: left; display:inline-block; min-width: 19em; max-width: 19em; font-family: Times New Roman, Georgia, Garamond; font-size: 0.45em; font-weight: normal;">Download essentials from GitHub to start creation of a mind-child, and join our community at Google Groups and Discord channels for any inquiries or content sharing.</span><br/><br/>
-                    <a target="_blank" href="https://github.com/mind-child" style="display:inline-block; width: 9em;">github</a><br/><br/>
+                    <span style="text-align: left; display:inline-block; min-width: 19em; max-width: 19em; font-family: Times New Roman, Georgia, Garamond; font-size: 0.425em; font-weight: normal;">
+                    Download essentials from <a target="_blank" href="https://github.com/mind-child" style="font-family: monospace;">GitHub</a> to start creation of a mind-child.<br/><br/>
+                    Join our community at <a target="_blank" href="https://groups.google.com/g/mind-child" style="font-family: monospace;">Google Groups</a> and <a target="_blank" href="https://discord.gg/wZEGmKqa3E" style="font-family: monospace;">Discord</a> channels for discussions and content sharing.<br/><br/>
+                    And don't forget to dream big. The bigger the dream, the more beautiful the world becomes.<br/><br/>
+                    Cheers!
+                    
+                    <!--a target="_blank" href="https://github.com/mind-child" style="display:inline-block; width: 9em;">github</a><br/><br/>
                     <a target="_blank" href="https://groups.google.com/g/mind-child" style="display:inline-block; width:9em;">google groups</a><br/><br/>
-                    <a target="_blank" href="https://discord.gg/uGFdAtqc" style="display:inline-block; width: 9em;">discord</a><br/><br/>
-                    <span style="text-align: left; display:inline-block; min-width: 19em; max-width: 19em; font-family: Times New Roman, Georgia, Garamond; font-size: 0.45em; font-weight: normal;">And don't forget to dream big. The bigger the dream, the more beautiful the world becomes.<br/><br/>Cheers!</span>
+                    <a target="_blank" href="https://discord.gg/wZEGmKqa3E" style="display:inline-block; width: 9em;">discord</a><br/><br/-->
+                    
+                    </span>
                 </strong></span>
             </p>
         </div>
-        <div class="center3" style="opacity: 0.75; display: flex; justify-content: center; align-items: center; color: rgb(48,48,48); background-color: rgb(208,208,208); border: none; width: 18em; height: 29em;">
+        <div class="center3" style="opacity: 0.75; display: flex; justify-content: center; align-items: center; color: rgb(48,48,48); background-color: rgb(208,208,208); border: none; width: 17.5em; height: 28.5em;">
             <p style="text-align: center; transform: rotate(-60deg);">
                 <span style="font-family: monospace; font-size: 5em; color: rgb(48,48,48);"><strong>
                     ...soon...
@@ -375,10 +382,24 @@
                 document.getElementById ("ifr").src = "rationale/index.html"
             }
             */
-
+            /*
             document.getElementById ("ifr").addEventListener('wheel', function (event) {
                 event.preventDefault ();
             }, {passive:false});
+            */
+
+            window.addEventListener("message", onMessage, false);
+            function onMessage(event) {
+                var data = event.data;
+
+                if (data.func === "scrollUp" && !scrolling && position === 1) {
+                    scrollUp ();
+                }
+                else if (data.func === "scrollDown" && !scrolling && position === 1) {
+                    scrollDown ();
+                }
+            }
+            
         </script>
     </body>
 </html>

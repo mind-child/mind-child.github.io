@@ -104,7 +104,7 @@
             the plan
         </h1>
         <p>
-            The plan for creating a mind child contains three successive phases:
+            The plan for creating a mind child consists of three successive phases:
         </p>
         <ol style="font-size: 1em;">
         <li>
@@ -139,7 +139,7 @@
             if (e.touches.length > 1) {  
                 e.preventDefault();
             }
-        }, {passive: false})
+        }, {passive: false});
 
         var rs = function() {
             document.body.style.fontSize = (window.innerHeight / 500) + 'em';
@@ -148,5 +148,59 @@
         window.addEventListener('resize', rs);
 
         rs();
+        /*
+        var curTime = (new Date()).getTime();
+        var postop, posbottom;
+        postop = true;
+        if (window.innerHeight >= document.body.scrollHeight) {
+            posbottom = true;
+        } else {
+            posbottom = false;
+        }
+        
+        window.onscroll = function(ev) {
+            if (window.innerHeight >= document.body.scrollHeight || (window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+                posbottom = true;
+                curTime = (new Date()).getTime();
+            }
+            else if (window.scrollY === 0) {
+                postop = true
+                curTime = (new Date()).getTime();
+            }
+            else if (window.innerHeight < document.body.scrollHeight) {
+                postop = false;
+                posbottom = false;
+                curTime = (new Date()).getTime();
+            }
+        }
+        
+        var touch = function (e) {
+            lastTouchY = e.touches[0].clientY;
+        }
+        
+        var lastTouchY;
+        var scroll = function (e) {
+            if (e.touches && e.touches.length > 1) {  
+                e.preventDefault();
+            } else {
+                if ((new Date()).getTime() - curTime > 250) {
+                    curTime = (new Date()).getTime();
+                    if (posbottom === true && (!e.deltaY || e.deltaY > 0) && (!e.touches || lastTouchY > e.touches[0].clientY)) {
+                        window.parent.postMessage({
+                            'func': 'scrollDown',
+                            'message': 'down'
+                        }, "*");
+                    }
+                    else if (postop === true && (!e.deltaY || e.deltaY < 0) && (!e.touches || lastTouchY < e.touches[0].clientY)) {
+                        window.location.replace("rationale.html");
+                    }
+                }
+            }
+        }
+
+        document.addEventListener('wheel', scroll);
+        document.addEventListener('touchmove', scroll);
+        document.addEventListener('touchstart', touch);
+        */
     </script>
 </html>
