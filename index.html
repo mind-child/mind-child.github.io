@@ -276,6 +276,9 @@
                     if (perc >= 1) {
                         clearInterval (st);
                         scrolling = false;
+                        if (position === 1) {
+                            window.frames[0].location.replace("mind-child.html");
+                        }
                         position++;
                         setTimeout (() => {
                             document.getElementById("nozoom").style.display = "none"
@@ -308,6 +311,9 @@
                     if (perc >= 1) {
                         clearInterval (st);
                         scrolling = false;
+                        if (position === 1) {
+                            window.frames[0].location.replace("mind-child.html");
+                        }
                         position--;
                         setTimeout (() => {
                             document.getElementById("nozoom").style.display = "none"
