@@ -148,7 +148,7 @@
         window.addEventListener('resize', rs);
 
         rs();
-        /*
+        
         var curTime = (new Date()).getTime();
         var postop, posbottom;
         postop = true;
@@ -188,11 +188,14 @@
                     if (posbottom === true && (!e.deltaY || e.deltaY > 0) && (!e.touches || lastTouchY > e.touches[0].clientY)) {
                         window.parent.postMessage({
                             'func': 'scrollDown',
-                            'message': 'down'
+                            'message': 'up'
                         }, "*");
                     }
                     else if (postop === true && (!e.deltaY || e.deltaY < 0) && (!e.touches || lastTouchY < e.touches[0].clientY)) {
-                        window.location.replace("rationale.html");
+                        window.parent.postMessage({
+                            'func': 'scrollUp',
+                            'message': 'up'
+                        }, "*");
                     }
                 }
             }
@@ -201,6 +204,6 @@
         document.addEventListener('wheel', scroll);
         document.addEventListener('touchmove', scroll);
         document.addEventListener('touchstart', touch);
-        */
+        
     </script>
 </html>
