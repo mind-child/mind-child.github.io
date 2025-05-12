@@ -1,2 +1,3 @@
 # mind-child.github.io
-home page
+
+[Home site for the mind-child project](https://mind-child.github.io)

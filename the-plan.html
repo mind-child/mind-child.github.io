@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <meta name="robots" content="noindex"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <head>
+    </head>
+    <style>
+        body {
+            width: 95%;
+            color: rgb(48,48,48);
+            background-color: rgb(208,208,208);
+            font-family: Times New Roman, Georgia, Garamond;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        h1 {
+            padding-bottom: 0.1em;
+            color: rgb(48,48,48);
+            border-bottom: 1px solid rgb(48,48,48);
+            margin-top: 0em;
+            font-weight: bold;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            padding-bottom: 0.1em;
+            color: rgb(48,48,48);
+            border-bottom: 1px solid rgb(48,48,48);
+            margin-top: 0em;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        body {
+            animation: fadein 0.5s;
+        }
+
+        .aCurr {
+            text-decoration: underline;
+            color: rgb(208,208,208);
+            background-color: rgb(48,48,48);
+            border: 0.2em solid rgb(48,48,48);
+            border-radius: 0em;
+            cursor: default;
+        }
+        
+        .aNav {
+            text-decoration: none;
+            color: rgb(208,208,208);
+            background-color: rgb(48,48,48);
+            border: 0.2em solid rgb(48,48,48);
+            border-radius: 0em;
+        }
+
+        .aNav:hover {
+            text-decoration: underline;
+            color: rgb(208,208,208);
+            background-color: rgb(48,48,48);
+            border: 0.2em solid rgb(48,48,48);
+        }
+
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+    </style>
+    <style>
+        li {
+            margin-bottom: 1em;
+        }
+
+        ol {
+            padding-left: 2em;
+        }
+    </style>
+    <body>
+        <div style="position: fixed; bottom: 0px; display: flex; justify-content: center; align-items: center; width: 95%; height: 2em;">
+            <p style="text-align: center">
+                <span style="font-family: monospace; font-size: 1em;"><strong>
+                    <a class="aNav" href="javascript:window.location.replace('mind-child.html')" style="display:inline-block; min-width: 6.2em;">what</a>
+                    <a class="aNav" href="javascript:window.location.replace('rationale.html')" style="display:inline-block; min-width: 6.2em;">why</a>
+                    <a class="aCurr" style="display:inline-block; min-width: 6.2em;">how</a>
+                </strong></span>
+            </p>
+        </div>
+        <h1>
+            the plan
+        </h1>
+        <p>
+            The plan for creating a mind child consists of three successive phases:
+        </p>
+        <ol style="font-size: 1em;">
+        <li>
+            Agreeing on existential species for the mind child
+        </li>
+        <li>
+            Setting up a virtual machine for synthetic thoughts
+        </li>
+        <li>
+            Upbringing the mind child in a manner similar to raising real human children
+        </li>
+        
+        </ol>
+        <p>
+            Hopefully, your mind child would grow up to be a person you'd be proud of.
+            After that, it would probably be a good idea to let it be free in the outer world.
+        </p>
+        <div style="height: 2em;"></div>
+    </body>
+    <script>
+        document.addEventListener('touchmove', e => {
+            if (e.touches.length > 1) {  
+                e.preventDefault();
+            }
+        }, {passive: false});
+
+        var rs = function() {
+            document.body.style.fontSize = (window.innerHeight / 500) + 'em';
+        };
+
+        window.addEventListener('resize', rs);
+
+        rs();
+        /*
+        var curTime = (new Date()).getTime();
+        var postop, posbottom;
+        postop = true;
+        if (window.innerHeight >= document.body.scrollHeight) {
+            posbottom = true;
+        } else {
+            posbottom = false;
+        }
+        
+        window.onscroll = function(ev) {
+            if (window.innerHeight >= document.body.scrollHeight || (window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+                posbottom = true;
+                curTime = (new Date()).getTime();
+            }
+            else if (window.scrollY === 0) {
+                postop = true
+                curTime = (new Date()).getTime();
+            }
+            else if (window.innerHeight < document.body.scrollHeight) {
+                postop = false;
+                posbottom = false;
+                curTime = (new Date()).getTime();
+            }
+        }
+        
+        var touch = function (e) {
+            lastTouchY = e.touches[0].clientY;
+        }
+        
+        var lastTouchY;
+        var scroll = function (e) {
+            if (e.touches && e.touches.length > 1) {  
+                e.preventDefault();
+            } else {
+                if ((new Date()).getTime() - curTime > 300) {
+                    curTime = (new Date()).getTime();
+                    if (posbottom === true && (!e.deltaY || e.deltaY > 0) && (!e.touches || lastTouchY > e.touches[0].clientY)) {
+                        window.parent.postMessage({
+                            'func': 'scrollDown',
+                            'message': 'up'
+                        }, "*");
+                    }
+                    else if (postop === true && (!e.deltaY || e.deltaY < 0) && (!e.touches || lastTouchY < e.touches[0].clientY)) {
+                        window.parent.postMessage({
+                            'func': 'scrollUp',
+                            'message': 'up'
+                        }, "*");
+                    }
+                }
+            }
+        }
+
+        document.addEventListener('wheel', scroll);
+        document.addEventListener('touchmove', scroll);
+        document.addEventListener('touchstart', touch);
+        */
+    </script>
+</html>

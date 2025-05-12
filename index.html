@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" translate="no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <title>mind-child</title>
+    <!--link rel="icon" type="image/png" href="https://github.com/mind-child/mind-child.github.io/blob/main/mind-child.png?raw=true"/-->
+    <link rel="icon" type="image/png" href="mind-child.png"/>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="mind-child"/>
+    <meta name="description" content="A little universe for synthetic thoughts"/>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://mind-child.github.io"/>
+    <meta property="og:title" content="mind-child"/>
+    <meta property="og:description" content="A little universe for synthetic thoughts"/>
+    <meta property="og:image" content="https://github.com/mind-child/mind-child.github.io/blob/main/mind-child.png?raw=true"/>
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:url" content="https://mind-child.github.io"/>
+    <meta property="twitter:title" content="mind-child"/>
+    <meta property="twitter:description" content="A little universe for synthetic thoughts"/>
+    <meta property="twitter:image" content="https://github.com/mind-child/mind-child.github.io/blob/main/mind-child.png?raw=true"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <style>
+            body, html {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                user-select: none;
+            }
+
+            body {
+                animation: fadein 0.5s;
+            }
+
+            @keyframes fadein {
+                from { opacity: 0; }
+                to   { opacity: 1; }
+            }
+
+            .center1back {
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(208,208,208);
+            }
+
+            .center1 {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                color: rgb(48,48,48);
+            }
+
+            .center2back {
+                position: absolute;
+                left: 0%;
+                top: 100%;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(48,48,48);
+            }
+
+            .center2 {
+                position: absolute;
+                left: 50%;
+                top: 150%;
+                transform: translate(-50%, -50%);
+                color: rgb(208,208,208);
+            }
+
+            .center3back {
+                position: absolute;
+                left: 0%;
+                top: 200%;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(208,208,208);
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .center3 {
+                position: absolute;
+                left: 50%;
+                top: 250%;
+                transform: translate(-50%, -50%);
+                color: rgb(48,48,48);
+                background-color: rgb(48,48,48);
+            }
+
+            /*
+            a {
+                text-decoration: none;
+                color: rgb(208,208,208);
+                background-color: rgb(48,48,48);
+                padding: 0.2em;
+            }
+
+            a:hover {
+                color: rgb(208,208,208);
+                background-color: rgb(48,48,48);
+            }
+            */
+/*
+            h1 {
+                padding-bottom: 0.1em;
+                color: rgb(208,208,208);
+                border-bottom: 1px solid rgb(208,208,208);
+                margin-top: 0em;
+                font-weight: bold;
+                font-size: 2.5em
+            }
+
+            p {
+                font-family: Times New Roman, Georgia, Garamond;
+            }
+
+            section {
+                display: table;
+                font-family: monospace;
+             }
+
+            section > * {
+                display: table-row;
+            }
+
+            section .col1 {
+                display: table-cell;
+                text-align: right;
+                padding-right: 0.5em;
+                font-size: 0.8em;
+            }
+
+            section .col2 {
+                display: table-cell;
+                font-size: 0.95em;
+            }
+*/            
+            svg {
+                user-select: none;
+            }
+        </style>
+    <body>
+        <div class="center1back"></div>
+        <div style="position: absolute; top: 0%; left: 50%; transform: translate(-50%, 0%);">
+            <p style="text-align: center; color: rgb(48,48,48); width: 18em;">
+                welcome to the<br/> mind-child proposal site
+            </p>
+        </div>
+        <div id="scd1" style="position: absolute; top: 100%; left: 50%; transform: translate(-50%, -100%);">
+            <p style="text-align: center; color: rgb(48,48,48);">
+                <svg onclick="scrollDown()" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 -960 960 960" width="2em" style="margin-left: auto; margin-right: auto; cursor: pointer; display: block; fill: rgb(208,208,208); background-color: rgb(48,48,48); border-radius: 0%;"><path d="M480-322 216-586l67-67 197 198 197-197 67 67-264 263Z"/></svg>
+            </p>
+        </div>
+        <div class="center1" style="width: 17.5em;">
+            <img id="i1" draggable="false" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 12em;" src="mind-child.png"/>
+        </div>
+
+
+        <div class="center2back"></div>
+        <div style="position: absolute; top: 100%; left: 50%; transform: translate(-50%, 0%);">
+            <p style="text-align: center; color: rgb(48,48,48);">
+                <svg onclick="scrollUp()" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 -960 960 960" width="2em" style="cursor: pointer; display: block; fill: rgb(208,208,208); background-color: rgb(48,48,48); border-radius: 0%;"><path d="m283-322-67-67 264-264 264 263-67 67-197-197-197 198Z"/></svg>
+            </p>
+        </div>
+        <div style="position: absolute; top: 200%; left: 50%; transform: translate(-50%, -100%);">
+            <p style="text-align: center; color: rgb(208,208,208);">
+                <svg onclick="scrollDown()" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 -960 960 960" width="2em" style="margin-left: auto; margin-right: auto; cursor: pointer; display: block; fill: rgb(208,208,208); background-color: rgb(48,48,48); border-radius: 0%;"><path d="M480-322 216-586l67-67 197 198 197-197 67 67-264 263Z"/></svg>
+            </p>
+        </div>
+        <div class="center2" style="background-color: rgb(208,208,208); border: none; border-radius: 0em;">
+            <iframe id="ifr" src="mind-child.html" style="display: block; width: 17.5em; height: 28.5em; border-radius: 0em; border: 0.25em solid rgb(208,208,208); padding: 0.125em;"></iframe>
+            <!--div id="nozoom" style="margin-left: -17.5em; opacity: 0%; width: 17.5em; height: 28.5em; border: 0.25em solid rgb(48,48,48); display: none;"></div-->
+        </div>
+        <div id="nozoom" class="center2" style="opacity: 0%; width: 17.5em; height: 28.5em; border: 0.25em solid rgb(208,208,208); display: none;"></div>
+
+
+        <div class="center3back"></div>
+        <div style="position: absolute; top: 200%; left: 50%; transform: translate(-50%, 0%);">
+            <p style="text-align: center; color: rgb(48,48,48);">
+                <svg onclick="scrollUp()" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 -960 960 960" width="2em" style="cursor: pointer; display: block; fill: rgb(208,208,208); background-color: rgb(48,48,48); border-radius: 0%;"><path d="m283-322-67-67 264-264 264 263-67 67-197-197-197 198Z"/></svg>
+            </p>
+        </div>
+        <div style="position: absolute; top: 300%; left: 50%; transform: translate(-50%, -100%);">
+            <p style="text-align: center; color: rgb(48,48,48);">
+                &#10084; 2025. mind-child,<br/> disclaiming&nbsp;all&nbsp;rights&nbsp
+            </p>
+        </div>
+        <div class="center3" style="display: flex; justify-content: center; align-items: center; color: rgb(48,48,48); background-color: rgb(48,48,48); border: none; border-radius: 0em; width: 17.5em; height: 28.5em;">
+            <iframe id="ifrM" src="canonical.html" style="display: block; width: 17.5em; height: 28.5em; border-radius: 0em; border: 0.25em solid rgb(48,48,48); padding: 0.125em; background-color: rgb(48,48,48);"></iframe>
+        </div>
+        <!--div class="center3" style="opacity: 0.75; display: flex; justify-content: center; align-items: center; color: rgb(48,48,48); background-color: rgb(208,208,208); border: none; width: 17.5em; height: 28.5em;">
+            <p style="text-align: center; transform: rotate(-60deg);">
+                <span style="font-family: monospace; font-size: 5em; color: rgb(48,48,48);"><strong>
+                    ...soon...
+                </strong></span>
+            </p>
+        </div-->
+
+        <script>
+            var scrolling = false;
+            var position = Math.round ( document.documentElement.scrollTop / document.body.clientHeight);
+            var scrollY = 0;
+            var lastScroll = false;
+            
+            setInterval ( function (event) {
+                if (!scrolling && position * document.body.clientHeight !== document.documentElement.scrollTop)
+                    document.documentElement.scrollTop = position * document.body.clientHeight;
+            }, 100);
+             
+            function resetVars() {
+                scrolling = false;
+                position = 0;
+                scrollY = 0;
+                lastScroll = false;
+                lastTouchY = undefined;
+                document.documentElement.scrollTop = 0;
+            }
+
+            function scrollDown () {
+                if (document.body.style.visibility === "hidden")
+                    return;
+                    
+                document.getElementById("nozoom").style.display = "block";
+                scrolling = true;
+                lastScroll = true;
+                var perc = 0;
+                var t = document.documentElement.scrollTop;
+                var st = setInterval (() => {
+                    perc += 0.1;
+                    if (perc >= 1) {
+                        perc = 1;
+                    }
+                    
+                    if (!position) {
+                        position = 0;
+                    }
+                    
+                    scrollY = position * document.body.clientHeight + document.body.clientHeight * Math.pow (perc, 0.2)
+                    document.documentElement.scrollTop = scrollY;
+                    if (perc >= 1) {
+                        clearInterval (st);
+                        scrolling = false;
+                        if (position === 1) {
+                            //window.frames[0].location.replace("mind-child.html");
+                        }
+                        position++;
+                        setTimeout (() => {
+                            document.getElementById("nozoom").style.display = "none"
+                        }, 250);
+                    }
+                }, 20);
+            }
+
+            function scrollUp () {
+                if (document.body.style.visibility === "hidden")
+                    return;
+                    
+                document.getElementById("nozoom").style.display = "block";
+                scrolling = true;
+                lastScroll = true;
+                var perc = 0;
+                var t = document.documentElement.scrollTop;
+                var st = setInterval (() => {
+                    perc += 0.1;
+                    if (perc >= 1) {
+                        perc = 1;
+                    }
+
+                    if (!position) {
+                        position = 0;
+                    }
+                    
+                    scrollY = (position - 1) * document.body.clientHeight + document.body.clientHeight * (1 - Math.pow (perc, 0.2));
+                    document.documentElement.scrollTop = scrollY;
+                    if (perc >= 1) {
+                        clearInterval (st);
+                        scrolling = false;
+                        if (position === 1) {
+                            //window.frames[0].location.replace("mind-child.html");
+                        }
+                        position--;
+                        setTimeout (() => {
+                            document.getElementById("nozoom").style.display = "none"
+                        }, 250);
+                    }
+                }, 20);
+            }
+            
+            var lastTouchY;
+            var se = function (e) {
+                if (e.touches && e.touches.length > 1) {  
+                    e.preventDefault();
+                } else {
+                    if (!scrolling) {
+                        if (lastScroll) {
+                            lastScroll = false;
+                            document.documentElement.scrollTo(0, scrollY);
+                        }
+                        else {
+                            if (position !== 2 && (!e.deltaY || e.deltaY > 0) && (!e.touches || lastTouchY > e.touches[0].clientY)) {
+                                scrollDown ();
+                            }
+                            else if (position !== 0 && (!e.deltaY || e.deltaY < 0) && (!e.touches || lastTouchY < e.touches[0].clientY)) {
+                                scrollUp ();
+                            }
+                        }
+                    }
+                    else {
+                        document.documentElement.scrollTo(0, scrollY);
+                    }
+                    
+                    e.preventDefault();
+                }
+            }
+
+            var ts = function (e) {
+                lastTouchY = e.touches[0].clientY;
+            }
+            
+            var rs = function (e) {
+                if (document.body.clientHeight < 500)
+                    document.body.style.visibility = "hidden";
+                else
+                    document.body.style.visibility = "visible";
+                    
+                document.documentElement.scrollTop = document.body.clientHeight * position;
+                scrollY = document.body.clientHeight * position;
+
+                document.body.style.fontSize = (document.body.clientHeight) / 625 + "em";
+                if (document.getElementById ("ifr").clientWidth > document.body.clientWidth - 32) {
+                    document.body.style.fontSize = (document.body.clientHeight) / 625 * (document.body.clientWidth - 32) / document.getElementById ("ifr").clientWidth + "em";
+                }
+            }
+
+            document.addEventListener('wheel', se, {passive:false});
+            document.addEventListener('touchmove', se, {passive:false});
+            document.addEventListener('touchstart', ts);
+            window.addEventListener('resize', rs);
+
+            rs();
+            
+            /*
+            let isSafari = navigator.vendor.match(/apple/i) //&&
+                     //!navigator.userAgent.match(/crios/i) &&
+                     //!navigator.userAgent.match(/fxios/i) &&
+                     //!navigator.userAgent.match(/Opera|OPT\//);
+                     
+            if (true || isSafari || window.location.protocol === "file:") {
+                document.getElementById ("ifr").src = "rationale.html";
+                //document.getElementById ("ifr").style.border = "0.25em solid rgb(48,48,48)";
+            }
+            else {
+                document.getElementById ("ifr").style.border = "none";
+                document.getElementById ("ifr").src = "rationale/index.html"
+            }
+            */
+            /*
+            document.getElementById ("ifr").addEventListener('wheel', function (event) {
+                event.preventDefault ();
+            }, {passive:false});
+            */
+
+            window.addEventListener("message", onMessage, false);
+            function onMessage(event) {
+                var data = event.data;
+
+                if (data.func === "scrollUp" && !scrolling && position === 1) {
+                    scrollUp ();
+                }
+                else if (data.func === "scrollDown" && !scrolling && position === 1) {
+                    scrollDown ();
+                }
+            }
+            
+            function getRaster (quant, color1, color2) {
+                var cnv = document.createElement ("canvas");
+                var pr = Math.min (window.devicePixelRatio, 2)
+                var ps = Math.round (quant / 100 * 4 * Math.max (screen.width, 1920) / 1920);
+                
+                if (ps < pr)
+                    ps = pr;
+                    
+                cnv.width = ps * 2;
+                cnv.height = ps * 2;
+                var ctx = cnv.getContext('2d');
+                ctx.fillStyle = "rgb(208,208,208)";
+                ctx.fillStyle = color1;
+                ctx.fillRect (0, 0, ps, ps);
+                ctx.fillRect (ps, ps, ps, ps);
+                ctx.fillStyle = "rgb(48,48,48)";
+                ctx.fillStyle = color2;
+                ctx.fillRect (0, ps, ps, ps);
+                ctx.fillRect (ps, 0, ps, ps);
+                
+                var img = document.createElement ("img");
+                img.src = cnv.toDataURL('image/png');
+                return img;
+            }
+
+            document.getElementsByClassName("center2back")[0].style.backgroundImage = "url('" + getRaster (75, "rgb(48,48,48)", "rgb(208,208,208)").src + "')";
+            document.getElementsByClassName("center2back")[0].style.backgroundRepeat = "repeat";
+            document.getElementsByClassName("center2back")[0].style.imageRendering = "pixelated";
+        </script>
+    </body>
+</html>

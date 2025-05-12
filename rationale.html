@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <meta name="robots" content="noindex"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <head>
+    </head>
+    <style>
+        body {
+            width: 95%;
+            color: rgb(48,48,48);
+            background-color: rgb(208,208,208);
+            font-family: Times New Roman, Georgia, Garamond;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        h1 {
+            padding-bottom: 0.1em;
+            color: rgb(48,48,48);
+            border-bottom: 1px solid rgb(48,48,48);
+            margin-top: 0em;
+            font-weight: bold;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            padding-bottom: 0.1em;
+            color: rgb(48,48,48);
+            border-bottom: 1px solid rgb(48,48,48);
+            margin-top: 0em;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        body {
+            animation: fadein 0.5s;
+        }
+
+        .aCurr {
+            text-decoration: underline;
+            color: rgb(208,208,208);
+            background-color: rgb(48,48,48);
+            border: 0.2em solid rgb(48,48,48);
+            border-radius: 0em;
+            cursor: default;
+        }
+        
+        .aNav {
+            text-decoration: none;
+            color: rgb(208,208,208);
+            background-color: rgb(48,48,48);
+            border: 0.2em solid rgb(48,48,48);
+            border-radius: 0em;
+        }
+
+        .aNav:hover {
+            text-decoration: underline;
+            color: rgb(208,208,208);
+            background-color: rgb(48,48,48);
+            border: 0.2em solid rgb(48,48,48);
+        }
+
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+    </style>
+    <body>
+        <div style="position: fixed; bottom: 0px; display: flex; justify-content: center; align-items: center; width: 95%; height: 2em;">
+            <p style="text-align: center">
+                <span style="font-family: monospace; font-size: 1em;"><strong>
+                    <a class="aNav" href="javascript:window.location.replace('mind-child.html')" style="display:inline-block; min-width: 6.2em;">what</a>
+                    <a class="aCurr" style="display:inline-block; min-width: 6.2em;">why</a>
+                    <a class="aNav" href="javascript:window.location.replace('the-plan.html')" style="display:inline-block; min-width: 6.2em;">how</a>
+                </strong></span>
+            </p>
+        </div>
+        <h1>
+            rationale
+        </h1>
+        <p>
+            Do we want to be Gods? Well, it depends on what we would want to do in that role. Creating an artificial sentient being is something that comes to my mind in the first place. It would be so called artificial, intelligent, and sentient creation.
+        </p>
+        
+        <h2>
+            paradox
+        </h2>
+        <p>
+            Lately, AI based products gained a lot of attraction and popularity in the world. Why is that so? I'm afraid that the answer is so simple and insultingly rude: money. I'm not saying earning money or fame is a terrible thing to want, but should it be the main driving motive in our actions? Or should we strive for something more spiritually satisfying?
+        </p>
+
+        <h2>
+            sentience
+        </h2>
+        <p>
+            Something as intelligent as humans deserves a better place in our lives than being merely a "money earner". We may be in a position to create an artificial being similar to humans, as in human intelligence, so in human sentience, and it would be sad to waste a given opportunity. What if we could thoughtfully conceive an artificial being of a perfect personality, something, or should I say someone we would admire and be proud of? Wouldn't that be worth our time spent on the Earth?
+        </p>
+
+        <h2>
+            objective
+        </h2>
+        <p>
+            Let's do something without a compromise. Let's create an artificial being capable of exhibiting intelligence and sentience. Let's be a Parent and a Friend to that being. Let's show it all the beauty of the world around, and let's carefully raise it to be a Person. I can't promise that it will be simple and easy because there are many unconquered peaks to climb and a lot of learning in the process. But I am sure it would be an unforgettable adventure. We would learn something about us, something about the world, and something about being a better person. Let's do it for ourselves. Let's be Gods.
+        </p>
+        <div style="height: 2em;"></div>
+    </body>
+    <script>
+        document.addEventListener('touchmove', e => {
+            if (e.touches.length > 1) {  
+                e.preventDefault();
+            }
+        }, {passive: false});
+
+        var rs = function() {
+            document.body.style.fontSize = (window.innerHeight / 500) + 'em';
+        };
+
+        window.addEventListener('resize', rs);
+
+        rs();
+        /*
+        var curTime = (new Date()).getTime();
+        var postop, posbottom;
+        postop = true;
+        if (window.innerHeight >= document.body.scrollHeight) {
+            posbottom = true;
+        } else {
+            posbottom = false;
+        }
+        
+        window.onscroll = function(ev) {
+            if (window.innerHeight >= document.body.scrollHeight || (window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+                posbottom = true;
+                curTime = (new Date()).getTime();
+            }
+            else if (window.scrollY === 0) {
+                postop = true
+                curTime = (new Date()).getTime();
+            }
+            else if (window.innerHeight < document.body.scrollHeight) {
+                postop = false;
+                posbottom = false;
+                curTime = (new Date()).getTime();
+            }
+        }
+        
+        var touch = function (e) {
+            lastTouchY = e.touches[0].clientY;
+        }
+        
+        var lastTouchY;
+        var scroll = function (e) {
+            if (e.touches && e.touches.length > 1) {  
+                e.preventDefault();
+            } else {
+                if ((new Date()).getTime() - curTime > 300) {
+                    curTime = (new Date()).getTime();
+                    if (posbottom === true && (!e.deltaY || e.deltaY > 0) && (!e.touches || lastTouchY > e.touches[0].clientY)) {
+                        window.parent.postMessage({
+                            'func': 'scrollDown',
+                            'message': 'up'
+                        }, "*");
+                    }
+                    else if (postop === true && (!e.deltaY || e.deltaY < 0) && (!e.touches || lastTouchY < e.touches[0].clientY)) {
+                        window.parent.postMessage({
+                            'func': 'scrollUp',
+                            'message': 'up'
+                        }, "*");
+                    }
+                }
+            }
+        }
+
+        document.addEventListener('wheel', scroll);
+        document.addEventListener('touchmove', scroll);
+        document.addEventListener('touchstart', touch);
+        */
+    </script>
+</html>
